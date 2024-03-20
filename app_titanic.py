@@ -14,9 +14,9 @@ df = df.select_dtypes(exclude="O")
 
 df.drop(columns=["PassengerId", "Parch"], inplace=True)
 
-esc = MinMaxScaler()
+escalado = MinMaxScaler()
 
-escalated = esc.fit_transform(df[["Age", "Fare"]])
+escalated = escalado.fit_transform(df[["Age", "Fare"]])
 
 df[["Age", "Fare"]] = escalated
 
